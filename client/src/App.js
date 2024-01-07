@@ -1,16 +1,15 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect } from "react";
 
 const App = () => {
-  const [name, setName] = useState([])
+  const [name, setName] = useState([]);
 
   useEffect(() => {
-    fetch('https://starter-name-generator.onrender.com/generate') // Change this URL to the one that you just deployed
+    fetch("https://starter-name-generator.onrender.com/generate")
       .then((res) => res.json())
-      .then((name) => setName([name]))
+      .then((nme) => setName([nme]));
+  }, []);
 
-  return (
-    <h1>{name}</h1>
-  )
-}
+  return <h1>{name}</h1>;
+};
 
-export default App
+export default App;
